@@ -36,7 +36,7 @@ public class DemoProducer implements Managed {
   }
 
   public Future<RecordMetadata> send(String message) {
-    LOG.info('LOG >> DIMPY >> '+message)
+    
     return producer.send(new ProducerRecord<>(config.getTopic(), message, message));
   }
 

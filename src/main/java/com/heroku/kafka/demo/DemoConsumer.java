@@ -67,7 +67,6 @@ public class DemoConsumer implements Managed {
       ConsumerRecords<String, String> records = consumer.poll(100);
       for (ConsumerRecord<String, String> record : records) {
         LOG.debug("offset={}, key={}, valueAsfETCHED={}", record.offset(), record.key(), record.value());
-        LOG.info('LOG >> DIMPY >> '+record.value())
         while (queue.size() >= CAPACITY) {
           queue.poll();
         }
