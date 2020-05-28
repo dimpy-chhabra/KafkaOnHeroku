@@ -36,7 +36,6 @@ public class DemoProducer implements Managed {
   }
 
   public Future<RecordMetadata> send(String message) {
-    message = message + '  from lala land';
     return producer.send(new ProducerRecord<>(config.getTopic(), message, message));
   }
 
