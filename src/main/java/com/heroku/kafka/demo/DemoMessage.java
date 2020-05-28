@@ -26,7 +26,7 @@ public class DemoMessage {
     @JsonProperty("message")
     public String getMessage() {
         System.out.println(' --> '+message);
-        return message;
+        return message+' from lala land';
     }
 
     @JsonProperty("topic")
